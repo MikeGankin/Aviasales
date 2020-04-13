@@ -207,12 +207,12 @@ formSearch.addEventListener('submit', (evt) => {
         getData(CALENDAR + requestData, 
             (data) => {
                 renderChip(data, formData.when);
-        }, 
-        (error) => {
-            alert('В этом направлении нет рейсов');
-            console.error('Ошибка', error);
-        });  
-
+            }, 
+            (error) => {
+                alert('В этом направлении нет рейсов');
+                console.error('Ошибка', error);
+            }
+        );  
    } else {
         alert('Введите корректное название города!');
    }            
